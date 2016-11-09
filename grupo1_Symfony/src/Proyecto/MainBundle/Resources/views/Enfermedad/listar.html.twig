@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+<h2>Listar Enfermedades</h2>
+<ul>
+{% for enfermedad in enfermedades %}
+<li>
+<a href="{{ path('proyecto_main_listarPorIdEn', {'id': enfermedad.id}) }}" >
+{{ enfermedad.nombre }}
+{{ enfermedad.descripcion }}:
+{{ enfermedad.idIndicaciones }}
+</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

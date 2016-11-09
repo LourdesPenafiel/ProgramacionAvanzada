@@ -1,0 +1,46 @@
+proyecto_estudiante_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+
+proyecto_estudiante_nuevo:
+    path:     /nuevo
+    defaults: { _controller: ProyectoMainBundle:Estudiante:nuevo }
+    
+proyecto_estudiante_modificar:
+    path:     /modificar/{id}
+    defaults: { _controller: ProyectoMainBundle:Estudiante:modificar }
+    
+proyecto_estudiante_detalle:
+    path:     /detalle/{id}
+    defaults: { _controller: ProyectoMainBundle:Estudiante:detalle }
+
+proyecto_estudiante_listar:
+    path:     /listar
+    defaults: { _controller: ProyectoMainBundle:Estudiante:listar }
+
+proyecto_estudiante_eliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Estudiante:eliminar }
+    
+    
+    
+proyecto_estudiante_estudianteNuevo:
+    path:     /nuevo/{nombres}/{apellidos}/{fechanacimiento}/{correo}/{direccion}/{telefono}/{Facultad}
+    defaults: { _controller: ProyectoMainBundle:Estudiante:estudianteNuevo, nombres:'Fredy Vicente', apellidos:'Sanchez Arteaga', correo:barcefredy_15@hotmail.com,fechanacimiento:'1995-03-01',direccion:Quitumbe,telefono:'0995630125',idFacultadFK:1}
+
+proyecto_estudiante_estudianteListar:
+    path:    /listar/todos
+    defaults: {_controller: ProyectoMainBundle:Estudiante:estudianteListar}
+
+proyecto_estudiante_estudianteDetalle:
+    path:     /detalle/{id}
+    defaults: {_controller: ProyectoMainBundle:Estudiante:estudianteDetalle}
+    
+proyecto_estudiante_estudianteModificar:
+    path:     /modificar/{id}/{nombres}/{apellidos}/{correo}/{fechanacimiento}/{direccion}/{telefono}/{idFacultadFK}
+    defaults: {_controller: ProyectoMainBundle:Estudiante:modificarEst,id:6, nombres:'Carolina Ramos', apellidos:'Saenz Araus', correo:caro56@hotmail.com,fechanacimiento:'1996-12-11',direccion:Quitumbe,telefono:'0987654312',idFacultadFK:2 }
+    
+proyecto_estudiante_estudianteEliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Estudiante:estudianteEliminar, id:6}
+    

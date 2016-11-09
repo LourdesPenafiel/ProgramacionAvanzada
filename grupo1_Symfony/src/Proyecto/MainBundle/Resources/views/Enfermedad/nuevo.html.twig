@@ -1,0 +1,37 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/framework/css/estilo.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form)}}
+    <h1>Registro de Enfermedades.</h1>
+    
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.estudiante) }}</div>
+        <div class="form_label">{{ form_label(form.estudiante) }}</div>
+        <div class="form_input">{{ form_widget(form.estudiante,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+    
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.nombre) }}</div>
+        <div class="form_label">{{ form_label(form.nombre) }}</div>
+        <div class="form_input">{{ form_widget(form.nombre,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.descripcion) }}</div>
+        <div class="form_label">{{ form_label(form.descripcion) }}</div>
+        <div class="form_input">{{ form_widget(form.descripcion,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+    
+    {{ form_widget(form.Guardar, {'label' : 'Guardar', 'attr': {'class': 'boton'}}) }}
+
+    <div class="form_bloque">
+        {{form_end(form) }}
+    {% endblock %}
+
+

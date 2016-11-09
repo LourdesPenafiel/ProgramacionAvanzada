@@ -1,0 +1,11 @@
+proyecto_main_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+    
+proyecto_enfermedad_nuevo:
+    path:     /nuevo
+    defaults: { _controller: ProyectoMainBundle:Enfermedad:nuevo }
+    
+proyecto_enfermedad_detalle:
+    path:     /detalle/{id}
+    defaults: { _controller: ProyectoMainBundle:Enfermedad:detalle }

@@ -1,0 +1,24 @@
+proyecto_indicaciones_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+
+
+proyecto_indicaciones_nuevo:
+    path:     /nuevo
+    defaults: { _controller: ProyectoMainBundle:Indicacion:nuevo }
+
+proyecto_indicaciones_modificar:
+    path:     /modificar/{id}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:modificar }
+    
+proyecto_indicaciones_detalle:
+    path:     /detalle/{id}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:detalle }
+
+proyecto_indicaciones_listar:
+    path:     /listar
+    defaults: { _controller: ProyectoMainBundle:Indicacion:listar }
+
+proyecto_indicaciones_eliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:eliminar }

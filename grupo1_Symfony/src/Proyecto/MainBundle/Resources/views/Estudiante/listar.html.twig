@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Formulario{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('bundles/framework/css/estilo.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    <h1>Lista de estudiantes.</h1>
+    <div class="lista">
+        <table>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Correo</th>
+                <th>Facultad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{nombres.id}}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

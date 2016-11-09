@@ -1,0 +1,62 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/framework/css/estilo.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form)}}
+    <h1>Modificar registro de estudiante.</h1>
+    
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.facultad) }}</div>
+        <div class="form_label">{{ form_label(form.facultad) }}</div>
+        <div class="form_input">{{ form_widget(form.facultad,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+    
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.nombres) }}</div>
+        <div class="form_label">{{ form_label(form.nombres) }}</div>
+        <div class="form_input">{{ form_widget(form.nombres,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.apellidos) }}</div>
+        <div class="form_label">{{ form_label(form.apellidos) }}</div>
+        <div class="form_input">{{ form_widget(form.apellidos,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.fechadenacimiento) }}</div>
+        <div class="form_label">{{ form_label(form.fechadenacimiento) }}</div>
+        <div class="form_input">{{ form_widget(form.fechadenacimiento,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.correo) }}</div>
+        <div class="form_label">{{ form_label(form.correo) }}</div>
+        <div class="form_input">{{ form_widget(form.correo,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.direccion) }}</div>
+        <div class="form_label">{{ form_label(form.direccion) }}</div>
+        <div class="form_input">{{ form_widget(form.direccion,{'attr': {'class': 'form_input'}}) }}</div>
+    </div>
+
+    <div class="form_bloque">
+        <div class="form_error">{{ form_errors(form.telefono) }}</div>
+        <div class="form_label">{{ form_label(form.telefono) }}</div>
+        <div class="form_input">{{ form_widget(form.telefono,{'attr': {'class': 'form_input'}})}}</div>
+    </div>
+
+    
+    {{ form_widget(form.Guardar, {'label' : 'Modificar', 'attr': {'class': 'boton'}}) }}
+
+    <div class="form_bloque">
+        {{form_end(form) }}
+    {% endblock %}
+
+

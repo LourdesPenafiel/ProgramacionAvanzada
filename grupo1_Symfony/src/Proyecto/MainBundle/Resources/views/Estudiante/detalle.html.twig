@@ -1,0 +1,36 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/framework/css/estilo.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    <h1>Detalle de estudiante.</h1>
+    <div class="detalle">
+        <table>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Correo</th>
+                <th>Facultad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+            <tr>
+                <td>{{nombres}}</td>
+                <td>{{apellidos}}</td>
+                <td>{{fechadenacimiento|date("m/d/Y")}}</td>
+                <td>{{correo}}</td>
+                <td>{{facultad.getNombre()}}/{{facultad.getCarrera()}}</td>
+                <td>{{direccion}}</td>
+                <td>{{telefono}}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,23 @@
+proyecto_medicamento_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+
+proyecto_medicamento_nuevo:
+    path:     /nuevo
+    defaults: { _controller: ProyectoMainBundle:Medicamento:nuevo }
+
+proyecto_medicamento_modificar:
+    path:     /modificar/{id}
+    defaults: { _controller: ProyectoMainBundle:Medicamento:modificar }
+    
+proyecto_medicamento_detalle:
+    path:     /detalle/{id}
+    defaults: { _controller: ProyectoMainBundle:Medicamento:detalle }
+
+proyecto_medicamento_listar:
+    path:     /listar
+    defaults: { _controller: ProyectoMainBundle:Medicamento:listar }
+
+proyecto_medicamento_eliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Medicamento:eliminar }

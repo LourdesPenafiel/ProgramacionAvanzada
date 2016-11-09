@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+<h2>Listar Indicaciones</h2>
+<ul>
+{% for indicacion in indicaciones %}
+<li>
+<a href="{{ path('proyecto_indicaciones_detalle', {'id': indicacion.id}) }}" >
+{{ indicacion.descripcion }}
+
+
+</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

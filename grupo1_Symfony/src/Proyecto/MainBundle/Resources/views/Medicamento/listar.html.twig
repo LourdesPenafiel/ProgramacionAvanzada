@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+<h2>Listar Medicamentos</h2>
+<ul>
+{% for medicamento in medicamentos %}
+<li>
+<a href="{{ path('proyecto_medicamento_detalle', {'id': medicamento.id}) }}" >
+
+{{ medicamento.nombre }}
+
+
+
+</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

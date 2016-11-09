@@ -1,0 +1,47 @@
+proyecto_facultad_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+
+proyecto_facultad_nuevo:
+    path:     /nuevo
+    defaults: { _controller: ProyectoMainBundle:Facultad:nuevo }
+    
+proyecto_facultad_modificar:
+    path:     /modificar/{id}
+    defaults: { _controller: ProyectoMainBundle:Facultad:modificar }
+
+proyecto_facultad_detalle:
+    path:     /detalle/{id}
+    defaults: { _controller: ProyectoMainBundle:Facultad:detalle }
+
+proyecto_facultad_listar:
+    path:     /listar
+    defaults: { _controller: ProyectoMainBundle:Facultad:listar }
+
+proyecto_facultad_eliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Facultad:eliminar }
+    
+
+
+
+proyecto_facultad_facultadNuevo:
+    path:     /nuevo/{nombre}/{descripcion}/{carrera}
+    defaults: { _controller: ProyectoMainBundle:Facultad:facultadNuevo, nombre:'Ingenieria', descripcion:'Edf.21', carrera:'Sistemas'}
+
+proyecto_facultad_facultadListar:
+    path:     /listar/todos
+    defaults: {_controller: ProyectoMainBundle:Facultad:facultadListar}
+
+proyecto_facultad_facultadDetalle:
+    path:     /detalle/{id}
+    defaults: {_controller: ProyectoMainBundle:Facultad:facultadDetalle}
+    
+proyecto_facultad_facultadModificar:
+    path:     /modificar/{id}/{nombre}/{descripcion}/{carrera}
+    defaults: {_controller: ProyectoMainBundle:Facultad:facultadModificar,id:2, nombre:'Tecnologia', descripcion:'Edf.8', carrera:'Agua y Saneamiento' }
+    
+proyecto_facultad_facultadEliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Facultad:facultadEliminar, id:2}
+

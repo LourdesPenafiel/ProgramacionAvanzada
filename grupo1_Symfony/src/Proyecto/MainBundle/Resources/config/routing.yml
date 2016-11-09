@@ -1,0 +1,123 @@
+proyecto_main_homepage:
+    path:     /
+    defaults: { _controller: ProyectoMainBundle:Default:index }
+
+proyecto_main_estudiante:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/estudiante.yml"
+    prefix:   /estudiante
+    
+proyecto_main_facultad:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/facultad.yml"
+    prefix:   /facultad
+    
+proyecto_main_enfermedad:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/enfermedad.yml"
+    prefix:   /enfermedad
+
+proyecto_main_padecer:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/padecer.yml"
+    prefix:   /padecer
+
+
+
+
+proyecto_main_indicaciones:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/indicaciones.yml"
+    prefix:   /indicaciones
+
+proyecto_main_medicamentosindicaciones:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/medicamentosindicaciones.yml"
+    prefix:   /medicamentosindicaciones
+
+
+proyecto_main_medicamento:
+    resource: "@ProyectoMainBundle/Resources/config/rutas/medicamento.yml"
+    prefix:   /medicamento
+
+
+
+
+
+
+   
+proyecto_main_nuevoP:
+    path:     /padecerNuevo/{idEstudiante}/{idEnfermedad}
+    defaults: { _controller: ProyectoMainBundle:Padecer:nuevoPadecer, idEstudiante:1,idEnfermedad:12}
+
+proyecto_main_eliminarP:
+    path:     /padecerEliminar/{idEstudiante}/{idEnfermedad}
+    defaults: { _controller: ProyectoMainBundle:Padecer:eliminarPadecer, idEstudiante:3,idEnfermedad:4}
+
+
+proyecto_main_MedicamentoNuevo:
+    path:     /MedicamentoNuevo/{nombre}/{descripcion}
+    defaults: { _controller: ProyectoMainBundle:Medicamento:MedicamentoNuevo, nombre:'Apronax', descripcion:'500ml'}
+
+proyecto_main_MedicamentoListar:
+    path:     /MedicamentoListar/todos
+    defaults: {_controller: ProyectoMainBundle:Medicamento:MedicamentoListar}
+
+proyecto_main_MedicamentoListarPorId:
+    path:     /MedicamentoListarPorId/detalle/{id}
+    defaults: {_controller: ProyectoMainBundle:Medicamento:MedicamentoListarPorId}
+    
+proyecto_main_MedicamentoModificar:
+    path:     /MedicamentoModificar/actualizar/{id}/{nombre}/{descripcion}
+    defaults: {_controller: ProyectoMainBundle:Medicamento:MedicamentoModificar,id:3, nombre:'Migradorixina', descripcion:'500mg'}
+    
+proyecto_main_MedicamentoEliminar:
+    path:     /MedicamentoEliminar/{id}
+    defaults: { _controller: ProyectoMainBundle:Medicamento:MedicamentoEliminar, id:3}
+
+
+proyecto_main_MedicamentoIndicacionNuevo:
+    path:     /MedicamentoIndicacionNuevo/{idMedicamento}/{idIndicacion}
+    defaults: { _controller: ProyectoMainBundle:MPI:MedicamentoIndicacionNuevo, idMedicamento:1,idIndicacion:2}
+
+proyecto_main_MedicamentoIndicacionEliminar:
+    path:     /MedicamentoIndicacionEliminar/{isMedicamento}/{idIndicacion}
+    defaults: { _controller: ProyectoMainBundle:MPI:MedicamentoIndicacionEliminar, idMedicamento:3,idIndicacion:5}
+
+
+
+proyecto_main_nuevoEn:
+    path:     /nuevoEnf/{nombre}/{descripcion}/{idIndicaciones}
+    defaults: { _controller: ProyectoMainBundle:Enfermedad:nuevoEnf,nombre:'gripe',descripcion:'ardor de garganta',idIndicaciones:2}
+
+proyecto_main_listarEn:
+    path:     /listarEnf/todos
+    defaults: {_controller: ProyectoMainBundle:Enfermedad:listarEnf}
+
+proyecto_main_listarPorIdEn:
+    path:     /listarEnf/detalle/{id}
+    defaults: {_controller: ProyectoMainBundle:Enfermedad:listarPorIdEnf}
+
+proyecto_main_modificarEn:
+    path:     /modificarEnf/{id}/{nombre}/{descripcion}/{idIndicaciones}
+    defaults: { _controller: ProyectoMainBundle:Enfermedad:modificarEnf,id:6, nombre:'fiebre',descripcion:'temperatura elevada',idIndicaciones:3}
+
+proyecto_main_eliminarEn:
+    path:     /eliminarEnf/{id}
+    defaults: { _controller: ProyectoMainBundle:Enfermedad:eliminarEnf,id:1}
+
+proyecto_main_nuevoI:
+    path:     /nuevoInd/{descripcion}/{idMedicamento}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:nuevoInd,descripcion:'tomar pasillas cada 8 horas', idMedicamento:3}
+
+proyecto_main_listarI:
+    path:     /listarInd/todos
+    defaults: {_controller: ProyectoMainBundle:Indicacion:listarInd}
+
+
+proyecto_main_listarPorIdI:
+    path:     /listarInd/detalle/{id}
+    defaults: {_controller: ProyectoMainBundle:Indicacion:listarPorIdInd}
+
+proyecto_main_modificarI:
+    path:     /modificarInd/{id}/{descripcion}/{idMedicamento}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:modificarInd,id:2, descripcion:'pastillas cada 4 horas',idMedicamento:2}
+
+proyecto_main_eliminarI:
+    path:     /eliminarInd/{id}
+    defaults: { _controller: ProyectoMainBundle:Indicacion:eliminarInd,id:3}
+
